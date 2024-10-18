@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultório de Psicologia - Dra. Ana Silva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dra. Ana Silva</h1>
+            <p>Psicóloga Especialista em Terapia Cognitivo-Comportamental</p>
+            <a href="#agendar" class="btn-agendar">Agende sua consulta</a>
+        </div>
+    </header>
+
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Sobre a Dra. Ana Silva</h2>
+            <p>Com mais de 10 anos de experiência, Dra. Ana ajuda pessoas a lidarem com questões emocionais, traumas e a buscarem o equilíbrio mental. Atendimentos personalizados para cada caso, com foco na melhoria da qualidade de vida dos pacientes.</p>
+        </div>
+    </section>
+
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2>Serviços Oferecidos</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Terapia Individual</h3>
+                    <p>Apoio emocional para enfrentar problemas como ansiedade, depressão e estresse.</p>
+                </div>
+                <div class="card">
+                    <h3>Terapia de Casal</h3>
+                    <p>Ajuda para melhorar a comunicação e resolver conflitos em relacionamentos.</p>
+                </div>
+                <div class="card">
+                    <h3>Aconselhamento Online</h3>
+                    <p>Atendimentos online para que você receba suporte no conforto da sua casa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="depoimentos">
+        <div class="container">
+            <h2>O que os pacientes dizem</h2>
+            <div class="depoimento">
+                <p>"A Dra. Ana me ajudou a superar uma fase muito difícil da minha vida. Sou muito grata!"</p>
+                <p><strong>- Maria Souza</strong></p>
+            </div>
+            <div class="depoimento">
+                <p>"Com a terapia, consegui entender melhor minhas emoções e como lidar com a ansiedade no dia a dia."</p>
+                <p><strong>- João Oliveira</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="agendar" class="agendar">
+        <div class="container">
+            <h2>Agende sua Consulta</h2>
+            <p>Preencha o formulário abaixo e entraremos em contato para agendar o melhor horário para você.</p>
+            <form action="#">
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu E-mail" required>
+                <input type="tel" placeholder="Seu Telefone" required>
+                <button type="submit">Agendar Consulta</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Consultório de Psicologia - Dra. Ana Silva</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            const nameInput = form.querySelector('input[type="text"]');
+            const emailInput = form.querySelector('input[type="email"]');
+            const phoneInput = form.querySelector('input[type="tel"]');
+    
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();  // Previne o envio automático do formulário
+    
+                let valid = true;
+    
+                // Validação básica de campos vazios
+                if (nameInput.value.trim() === "") {
+                    alert("Por favor, insira seu nome.");
+                    valid = false;
+                }
+    
+                if (emailInput.value.trim() === "" || !validateEmail(emailInput.value)) {
+                    alert("Por favor, insira um e-mail válido.");
+                    valid = false;
+                }
+    
+                if (phoneInput.value.trim() === "" || !validatePhone(phoneInput.value)) {
+                    alert("Por favor, insira um telefone válido.");
+                    valid = false;
+                }
+    
+                // Se for válido, simula o envio do formulário
+                if (valid) {
+                    alert("Consulta agendada com sucesso! Entraremos em contato em breve.");
+                    form.reset();  // Limpa o formulário
+                }
+            });
+    
+            // Função de validação de e-mail usando regex
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(String(email).toLowerCase());
+            }
+    
+            // Função de validação de telefone usando regex
+            function validatePhone(phone) {
+                const re = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+                return re.test(phone);
+            }
+        });
+    </script>
+    
+</body>
+</html>

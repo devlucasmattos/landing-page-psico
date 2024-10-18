@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    background-color: #5f9ea0;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.btn-agendar {
+    background-color: #fff;
+    color: #5f9ea0;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-agendar:hover {
+    background-color: #eee;
+}
+
+.sobre, .servicos, .depoimentos, .agendar {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.sobre h2, .servicos h2, .depoimentos h2, .agendar h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: #5f9ea0;
+}
+
+.depoimento {
+    margin-bottom: 2rem;
+}
+
+.agendar form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agendar input {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    width: 60%;
+    max-width: 400px;
+}
+
+.agendar button {
+    background-color: #5f9ea0;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.agendar button:hover {
+    background-color: #468686;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
