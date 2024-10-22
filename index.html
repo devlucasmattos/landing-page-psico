@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultório de Psicologia - Dra. Ana Silva</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Consultório de Psicologia - Gabrielle Chemieski</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Adicionando Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    
 <body>
     <header>
         <div class="container">
-            <h1>Dra. Ana Silva</h1>
-            <p>Psicóloga Especialista em Terapia Cognitivo-Comportamental</p>
-            <a href="#agendar" class="btn-agendar">Agende sua consulta</a>
+            <h1>Gabrielle Chemieski</h1>
+            <h2>CRP 07/39189</h2>
+            <p>A transformação que você busca começa na sua mente. Vamos caminhar juntos? 🧠⤵️</p>
+            <a href="https://api.whatsapp.com/message/3YQT5VMFXFKHI1?autoload=1&app_absent=0" target="_blank" class="btn-agendar">Agende sua consulta pelo WhatsApp</a>
+
         </div>
     </header>
-
+    <div class="container foto-perfil">
+        <img src="gabrielle-chemieski.jpg" alt="Foto de Gabrielle Chemieski">
+    </div>
     <section id="sobre" class="sobre">
         <div class="container">
-            <h2>Sobre a Dra. Ana Silva</h2>
-            <p>Com mais de 10 anos de experiência, Dra. Ana ajuda pessoas a lidarem com questões emocionais, traumas e a buscarem o equilíbrio mental. Atendimentos personalizados para cada caso, com foco na melhoria da qualidade de vida dos pacientes.</p>
+            <h2>Sobre mim</h2>
+            <p>"Psicóloga formada pela Faculdade Anhanguera de Rio Grande, com especialização em Saúde Mental, Psicopatologia, Atenção Psicossocial e Terapia Cognitivo-Comportamental. Atualmente, atua como psicóloga clínica, realizando atendimentos online para jovens adultos, adultos e idosos ao redor do mundo, além de atendimentos presenciais na cidade de Rio Grande, RS."</p>
         </div>
     </section>
-
+    
     <section id="servicos" class="servicos">
         <div class="container">
             <h2>Serviços Oferecidos</h2>
@@ -46,8 +54,12 @@
         <div class="container">
             <h2>O que os pacientes dizem</h2>
             <div class="depoimento">
-                <p>"A Dra. Ana me ajudou a superar uma fase muito difícil da minha vida. Sou muito grata!"</p>
+                <p>"A Gabrielle Chemieski me ajudou a superar uma fase muito difícil da minha vida. Sou muito grata!"</p>
                 <p><strong>- Maria Souza</strong></p>
+            </div>
+            <div class="depoimento">
+                <p>"Com a terapia, consegui entender melhor minhas emoções e como lidar com a ansiedade no dia a dia."</p>
+                <p><strong>- João Oliveira</strong></p>
             </div>
             <div class="depoimento">
                 <p>"Com a terapia, consegui entender melhor minhas emoções e como lidar com a ansiedade no dia a dia."</p>
@@ -55,73 +67,20 @@
             </div>
         </div>
     </section>
-
-    <section id="agendar" class="agendar">
-        <div class="container">
-            <h2>Agende sua Consulta</h2>
-            <p>Preencha o formulário abaixo e entraremos em contato para agendar o melhor horário para você.</p>
-            <form action="#">
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu E-mail" required>
-                <input type="tel" placeholder="Seu Telefone" required>
-                <button type="submit">Agendar Consulta</button>
-            </form>
-        </div>
-    </section>
-
+            <!-- Redes sociais -->
+            <div class="social-links">
+                <h2>Saiba mais</h2>
+                <a href="https://www.instagram.com/psi.gabriellechemieski/" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gabriellechemieski/" target="_blank" class="social-icon linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
     <footer>
         <div class="container">
-            <p>&copy; 2024 Consultório de Psicologia - Dra. Ana Silva</p>
+            <p>&copy; 2024 - Gabrielle Chemieski</p>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.querySelector('form');
-            const nameInput = form.querySelector('input[type="text"]');
-            const emailInput = form.querySelector('input[type="email"]');
-            const phoneInput = form.querySelector('input[type="tel"]');
-    
-            form.addEventListener('submit', function (event) {
-                event.preventDefault();  // Previne o envio automático do formulário
-    
-                let valid = true;
-    
-                // Validação básica de campos vazios
-                if (nameInput.value.trim() === "") {
-                    alert("Por favor, insira seu nome.");
-                    valid = false;
-                }
-    
-                if (emailInput.value.trim() === "" || !validateEmail(emailInput.value)) {
-                    alert("Por favor, insira um e-mail válido.");
-                    valid = false;
-                }
-    
-                if (phoneInput.value.trim() === "" || !validatePhone(phoneInput.value)) {
-                    alert("Por favor, insira um telefone válido.");
-                    valid = false;
-                }
-    
-                // Se for válido, simula o envio do formulário
-                if (valid) {
-                    alert("Consulta agendada com sucesso! Entraremos em contato em breve.");
-                    form.reset();  // Limpa o formulário
-                }
-            });
-    
-            // Função de validação de e-mail usando regex
-            function validateEmail(email) {
-                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return re.test(String(email).toLowerCase());
-            }
-    
-            // Função de validação de telefone usando regex
-            function validatePhone(phone) {
-                const re = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
-                return re.test(phone);
-            }
-        });
-    </script>
-    
 </body>
 </html>
