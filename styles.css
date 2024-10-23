@@ -172,18 +172,16 @@ header p {
     color: #5f9ea0;
 }
 
-/* Depoimentos */
 .depoimento {
     margin-bottom: 2rem;
 }
 
-/* Depoimentos */
 .depoimentos {
     background-color: #f4f4f4;
-    border-radius: 3%;
+    border-radius: 10px;
     margin: 40px auto; /* Centraliza horizontalmente e adiciona margem vertical */
     width: 80%; /* Define uma largura para facilitar o centramento */
-    padding: 20px; /* Adiciona espaçamento interno */
+    padding: 40px; /* Adiciona espaçamento interno */
     text-align: center; /* Garante que o conteúdo dentro da seção também seja centralizado */
 }
 
