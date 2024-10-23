@@ -127,7 +127,6 @@ header p {
     text-align: center;
 }
 
-
 .sobre, .servicos, .depoimentos {
     padding: 3rem 0;
     text-align: center;
@@ -144,11 +143,12 @@ header p {
     color: #333; /* Cor do texto */
 }
 
-/* Títulos de seções */
+/* Títulos de seções com sublinhado deslizante */
 .sobre h2, .servicos h2, .depoimentos h2 {
     margin-bottom: 2rem;
     font-size: 2rem;
     color: #333;
+    position: relative; /* Necessário para o posicionamento do pseudo-elemento */
 }
 
 /* Cards de Serviços */
@@ -246,4 +246,23 @@ footer p {
     .card {
         width: 100%;
     }
+}
+
+/* Efeito de sublinhado deslizante */
+.sobre h2::after, .servicos h2::after, .depoimentos h2::after {
+    content: ''; /* Necessário para criar o pseudo-elemento */
+    display: block; /* Para criar um bloco abaixo do h2 */
+    width: 50%; /* Ajuste conforme necessário, por exemplo, 80% para uma largura menor */
+    height: 4px; /* Altura do sublinhado */
+    background-color: #5f9ea0; /* Cor do sublinhado */
+    position: absolute; /* Posicionamento absoluto em relação ao h2 */
+    left: 50%; /* Alinhar ao centro do h2 */
+    bottom: -5px; /* Distância do h2 até o sublinhado */
+    transform: translateX(-50%) scaleX(0); /* Inicialmente escondido e centralizado */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+/* Efeito quando o h2 está ativo */
+.sobre h2.active::after, .servicos h2.active::after, .depoimentos h2.active::after {
+    transform: translateX(-50%) scaleX(1); /* Mostra o sublinhado quando o h2 é ativado */
 }
